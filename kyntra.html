@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyntra - Guided Rehab</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Mulish -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link rel="stylesheet" href="kyntra-styles.css">
+</head>
+<body x-data="{ mobileMenuOpen: false }">
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="Assets/Icons/logo.png" alt="KYNTRA" />
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#demo">Demo</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#team">Team</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="mobile-menu-button">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    <path x-show="mobileMenuOpen" style="display: none;" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div x-show="mobileMenuOpen" style="display: none;" class="nav-mobile container">
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#demo">Demo</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#team">Team</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h2 class="hero-title">
+                    Your Guided Rehab <br> for Everyday Injuries
+                </h2>
+                <p class="hero-subtitle">
+                    Kyntra helps you recover from shoulder and joint pain with guided motion tracking - anytime, at your own pace.
+                </p>
+                <div class="hero-image-wrapper">
+                    <!-- Hero Image with Built-in Floating Tags and Phone Mockup -->
+                    <img src="Assets/Icons/Motion_image.png" alt="Kyntra app showing real-time motion tracking with angle detection, posture check, repetition counter, and feedback" class="hero-showcase-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Real-Time Motion Tracking Section -->
+        <section id="features">
+            <div class="container">
+                <h3 class="section-title">Real-Time Motion Tracking</h3>
+                <p class="section-subtitle">
+                    Get real-time feedback and progress tracking tailored to your recovery journey. Select the specific body area where you're experiencing pain, and let Kyntra guide you through targeted exercises. Your dashboard updates daily with insights, accuracy scores, and upcoming sessions — helping you stay motivated and on track.
+                </p>
+            </div>
+        </section>
+
+        <!-- Guided Video Library Section -->
+        <section class="bg-alt">
+            <div class="container grid-2-col">
+                <div>
+                    <img src="Assets/Icons/VideoLibrary.png" class="feature-image image-animate">
+                </div>
+                <div class="text-content">
+                    <h3 class="section-title">Guided Video Library</h3>
+                    <p class="section-subtitle">
+                        Get real-time feedback and progress tracking tailored to your recovery journey. Select the specific body area where you're experiencing pain, and let Kyntra guide you through targeted exercises. Your dashboard updates
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expert Chat Section -->
+        <section>
+            <div class="container grid-2-col">
+                <div class="text-content">
+                    <h3 class="section-title">Need help? Search, Expert or chat with AI</h3>
+                    <p class="section-subtitle">
+                       Need in-person care? Easily find nearby physiotherapy clinics with contact details and directions right from the app. For instant support, our built-in AI assistant is available 24/7 to answer your questions, offer recovery advice, or suggest exercises based on your condition so you're never without guidance, even when a real therapist isn’t around.
+                    </p>
+                </div>
+                <div class="chat-image-stack">
+                     <img src="Assets/Icons/Map.png" class="chat-image chat-image-1 image-animate">
+                     <img src="Assets/Icons/Chat.png" alt="App chat interface 2" class="chat-image chat-image-2 image-animate">
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo Section -->
+        <section id="demo" class="bg-alt">
+            <div class="container">
+                <h3 class="section-title">Watch the demo</h3>
+                <div class="demo-video-wrapper">
+                    <img src="https://placehold.co/1200x600/e0e0e0/a0a0a0?text=Video+Thumbnail" alt="Woman exercising with dumbbells">
+                    <div class="demo-video-overlay">
+                        <div class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Expert Inputs Section -->
+        <section id="testimonials" class="expert-inputs-section">
+             <div class="container">
+                <h3 class="section-title">Designed with Expert Inputs</h3>
+                
+                <div class="expert-testimonials">
+                    <div class="expert-card">
+                        <div class="expert-info">
+                            <h4 class="expert-name">Raelene Lang</h4>
+                            <p class="expert-title">MSc, RPT, PhD, CMD Physiotherapist, Instructor Department of Kinesiology</p>
+                        </div>
+                        <blockquote class="expert-quote">
+                            "Not everyone can afford or access regular physiotherapy. A tool like <strong>Kyntra</strong> could support patients with basic routines and self-management strategies, especially for minor conditions like posture-related neck or back pain"
+                        </blockquote>
+                    </div>
+                    
+                    <div class="expert-card">
+                        <div class="expert-info">
+                            <h4 class="expert-name">Gillian Corbo</h4>
+                            <p class="expert-title">MPT, MSc, BSci Physiotherapist, Instructor Department of Kinesiology</p>
+                        </div>
+                        <blockquote class="expert-quote">
+                            "Patients often struggle with proper form when doing exercises at home. Having a tool like <strong>Kyntra</strong> that provides real-time feedback could help them follow routines more safely and consistently"
+                        </blockquote>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team">
+            <div class="container">
+                <h3 class="section-title">Meet the team</h3>
+                
+                <!-- UI/UX Designers -->
+                <div class="team-section-group">
+                    <h4 class="team-group-title">UI/UX Designers</h4>
+                    <div class="team-grid designers">
+                        <div class="team-member">
+                            <div class="team-photo">
+                                <img src="Assets/Team/surbhi.png" alt="Surbhi Nayyar">
+                            </div>
+                            <h4>Surbhi Nayyar</h4>
+                            <p>UI/UX Designer</p>
+                            <a href="https://linkedin.com/in/surbhi-nayyar" target="_blank" class="linkedin-link">
+                                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                                /surbhi-nayyar
+                            </a>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-photo">
+                                <img src="Assets/Team/mashiur.png" alt="Mashiur Rahman">
+                            </div>
+                            <h4>Mashiur Rahman</h4>
+                            <p>UI/UX Designer</p>
+                            <a href="https://linkedin.com/in/mashiur-rahman" target="_blank" class="linkedin-link">
+                                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                                /mashiur-rahman
+                            </a>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-photo">
+                                <img src="Assets/Team/Adila.png" alt="Adila Nazar">
+                            </div>
+                            <h4>Adila Nazar</h4>
+                            <p>UI/UX Designer</p>
+                            <a href="https://linkedin.com/in/adila-nazar" target="_blank" class="linkedin-link">
+                                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                                /adila-nazar
+                            </a>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-photo">
+                                <img src="Assets/Team/Kartik.png" alt="Kartik Bhanderi">
+                            </div>
+                            <h4>Kartik Bhanderi</h4>
+                            <p>UI/UX Designer</p>
+                            <a href="https://linkedin.com/in/kartik-bhanderi" target="_blank" class="linkedin-link">
+                                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                                /kartik-bhanderi
+                            </a>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-photo">
+                                <img src="Assets/Team/tomohiro.png" alt="Tomohiro Yamamoto">
+                            </div>
+                            <h4>Tomohiro</h4>
+                            <p>UI/UX Designer</p>
+                            <a href="https://linkedin.com/in/tomohiro-yamamoto" target="_blank" class="linkedin-link">
+                                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                                /tomohiro
+                            </a>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-photo">
+                                <img src="Assets/Team/dhaval.png" alt="Dhawal Kumar">
+                            </div>
+                            <h4>Dhawal Kumar</h4>
+                            <p>UI/UX Designer</p>
+                            <a href="https://linkedin.com/in/dhaval-paghadal" target="_blank" class="linkedin-link">
+                                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                                /dhaval-paghadal
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Full Stack Developers -->
+                <div class="team-section-group">
+                    <h4 class="team-group-title">Full Stack Developers</h4>
+                    <div class="team-grid developers">
+                        <div class="team-member">
+                            <div class="team-photo developer">
+                                <img src="Assets/Team/sourav.png" alt="Sourav Shetty">
+                            </div>
+                            <h4>Sourav Shetty</h4>
+                            <p>Full Stack Developer</p>
+                            <a href="https://linkedin.com/in/sourav-s-shetty" target="_blank" class="linkedin-link">
+                                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                                /sourav-shetty
+                            </a>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-photo developer">
+                                <img src="Assets/Team/venky.png" alt="Venkatesh">
+                            </div>
+                            <h4>Venkatesh</h4>
+                            <p>Full Stack Developer</p>
+                            <a href="https://linkedin.com/in/venkatesh-pothamsetty" target="_blank" class="linkedin-link">
+                                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                                /venkatesh
+                            </a>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-photo developer">
+                                <img src="Assets/Team/jasprit.png" alt="Jaspreet Singh">
+                            </div>
+                            <h4>JASPREET SINGH</h4>
+                            <p>Full Stack Developer</p>
+                            <a href="https://www.linkedin.com/in/jaspreet-singh-b70717306/" target="_blank" class="linkedin-link">
+                                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                                /jaspreet-singh
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Healing Monitor Section -->
+        <section class="bg-peach">
+            <div class="container grid-2-col">
+                <div class="text-content">
+                    <h3 class="section-title">Your Healing Monitor</h3>
+                    <p class="section-subtitle">
+                        Discover how Kyntra is reshaping at-home rehab with real-time feedback, smart support, and meaningful impact
+                    </p>
+                    <button class="cta-button">
+                        View Proposal
+                    </button>
+                </div>
+                <div>
+                    <img src="Assets/Icons/Proposal.png" alt="App dashboard showing healing progress" style="width: 100%;">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="logo">
+                <img src="Assets/Icons/logowhite.png" alt="KYNTRA" />
+            </div>
+            <nav class="footer-nav">
+                <a href="#">About</a>
+                <a href="#">Careers</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </nav>
+            <p class="footer-copy">&copy; 2025 Kyntra. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Update active class on navigation links during scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all sections that have an ID defined
+            const sections = document.querySelectorAll('section[id]');
+            
+            // Intersection Observer for image animations
+            const observerOptions = {
+                threshold: 0.3,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const imageObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        // Optional: stop observing after animation
+                        imageObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all images with image-animate class
+            document.querySelectorAll('.image-animate').forEach(img => {
+                imageObserver.observe(img);
+            });
+            
+            // Add an event listener for scroll
+            window.addEventListener('scroll', function() {
+                // Get current scroll position
+                const scrollY = window.pageYOffset;
+                
+                // Loop through sections to get height, top and ID values for each
+                sections.forEach(current => {
+                    const sectionHeight = current.offsetHeight;
+                    const sectionTop = current.offsetTop - 100; // Offset for better UX
+                    const sectionId = current.getAttribute('id');
+                    
+                    // Check if we've scrolled to the section
+                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                        // Update active class for both desktop and mobile navigation
+                        document.querySelectorAll('.nav-desktop a, .nav-mobile a').forEach(a => {
+                            a.classList.remove('active');
+                            if (a.getAttribute('href') === '#' + sectionId) {
+                                a.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            });
+            
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('.nav-mobile a').forEach(link => {
+                link.addEventListener('click', function() {
+                    // Find the Alpine component and update its mobileMenuOpen property
+                    document.querySelector('[x-data]').__x.$data.mobileMenuOpen = false;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
